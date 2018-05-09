@@ -1,14 +1,4 @@
-Afdfdf
-A
-<<<<<<< HEAD
-C
-C
-diffdfdf
-dfsaf
-asdS
-=======
-Bdfsa:
-Bdffsa
-Bdfsa
-dffdfdf
->>>>>>> featurel
+this is masterS
+increase a test branch
+modify readme.txt at test:wq
+
