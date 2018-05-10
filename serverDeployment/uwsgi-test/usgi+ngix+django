@@ -1,0 +1,5 @@
+配置Nginx & uWSGI & Django（服务器）
+1.完成django项目
+2.将django项目部署到服务器上（包括虚拟环境）
+3.安装uwsgi，并在项目中创建test.py进行测试，在项目根目录下创建my_uwsgi.ini并配置，最后启动uwsgi
+4.安装nginx,配置nginx,将/etc/nginx/目录下的uwsgi_params复制到项目文件夹，对此文件不做任何改动，在根目录下配置my_nginx.conf,与nginx配置目录建立连接，并在根目录下创建静态文件和媒体文件并在settings里面配置，完成后执行静态文件的回迁
