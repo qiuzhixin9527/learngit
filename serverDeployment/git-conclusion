@@ -1,0 +1,116 @@
+一.本地仓库
+  1.安装git:
+	sudo apt-get install git
+  2,创建用户名和邮箱
+	$ git config --global user.name "Your Name"
+	$ git config --global user.email "email@example.com"
+  3.创建本地仓库
+	$ mkdir learngit 
+	$ cd learngit
+	$ git init
+  4.添加到缓存区
+	$ git add readme.txt
+  5.提交到分支上
+	$ git commit -m "wrote a readme file"
+  6.查看本地仓库当时的状态
+	git status
+  7.查看历史记录
+	git reflog
+  8.时间穿梭
+	git reset --hard commit_id
+  9.文件穿梭
+	git checkout -- readme.txt
+  10.删除文件
+	$ git rm test.txt
+二.远程仓库
+  1.创建ssh
+	$ ssh-keygen -t rsa -C "youremail@example.com"
+  2.复制id_rsa.pub公钥到git
+  3.将本地仓库和git仓库关联起来
+	 git remote add origin git@github.com:michaelliao/learngit.git
+  4.将本地某个分支上的内容推送到git上
+	git push -u origin master
+  5.将git上的内容拉取到本地
+	git pull -u origin master
+  6.克隆到本地仓库
+	$ git clone git@github.com:michaelliao/gitskills.git
+  7.创建分支
+	$ git branch dev
+  8.切换分支
+	$ git checkout dev
+  9.我们创建dev分支，然后切换到dev分支：
+	$ git checkout -b dev
+  10.删除分支
+	$ git branch -d dev
+  11.查看分支
+	git branch
+  12.快速可并分支
+	$ git merge dev
+  13.可并冲突分支
+	1.$ git add readme.txt 
+	  $ git commit -m "conflict fixed"
+	2.$ git merge --no-ff -m "merge with no-ff" dev注意新生成的需要加-m
+  14.查看分支合并状态
+	$ git log --graph --pretty=oneline --abbrev-commit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
