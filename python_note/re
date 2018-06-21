@@ -1,0 +1,4 @@
+流氓匹配
+ pattern = re.compile('<p class="name">[\s\S]*?title="([\s\S]*?)"[\s\S]*?<p class="star">([\s\S]*?)</p>[\s\S]*?<p class="releasetime">([\s\S]*?)</p>[\s\S]*?<p class="score"><i class="integer">([\s\S]*?)</i><i class="fraction">([\s\S]*?)</i>')
+results = re.findall(pattern, html)
+

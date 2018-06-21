@@ -1,0 +1,12 @@
+1.os.getcwd()函数得到当前工作目录，即当前Python脚本工作的目录路径。
+2.os.listdir(path)返回指定目录下的所有文件和目录名。
+3.os.remove(path)函数用来删除一个文件。
+os.path常用方法：
+4.os.path.isfile()和os.path.isdir()函数分别检验给出的路径是一个文件还是目录。
+4.os.path.isdir()判断是否是一个文件
+5.os.path.exists()函数用来检验给出的路径是否真地存在
+6.os.path.abspath(name):获得绝对路径
+创建文件夹
+7.os.path.mkdir()单层的创建文件夹
+7.os.path.mkdir()多层的创建文件夹
+
