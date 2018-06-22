@@ -1,0 +1,6 @@
+对字典进行排序
+对Value排序
+	d = {'a': 4, 'b': 2, 'c': 7}
+	l = sorted(d.items(), key = lambda x:x[1], reverse=True)
+对key排序
+	l = sorted(d.items(), key = lambda x:x[0], reverse=True)

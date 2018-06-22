@@ -1,0 +1,23 @@
+1.百度图片地址：
+  url_init_first = r'http://image.baidu.com/search/flip?                    tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1497491098685_R&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&ctd=1497491098685%   5E00_1519X735&word='
+2.对word进行编码
+	word = '王毅'
+	urllib.parse.quote(word, safe='/')
+requests的基本实例
+	data = {'word':'123'}
+	r = requests.get(url, params=data, headers=header)
+	r = requests.post(url, post=data)
+	r.encoding = r.apparent_encoding
+requests的异常处理
+	import requests
+	from requests.exceptions import ReadTimeout,HTTPError,RequestException
+
+	try:
+    response = requests.get('http://www.baidu.com',timeout=0.5)
+    print(response.status_code)
+	except ReadTimeout:
+    print('timeout')
+	except HTTPError:
+    print('httperror')
+	except RequestException:
+    print('reqerror')
