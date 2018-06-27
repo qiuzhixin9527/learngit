@@ -1,1 +1,18 @@
 1.time.time()返回当前时间的时间戳，单位是秒，
+2.time中的时间格式输出
+	time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
+	strftime()可以将struct_time类型自由转换成字符型
+3.time.process_time()
+	返回当前进程使用CPU的时间。以小数方式返回，单位为秒。
+4.datetime模块
+	1.now	
+		In [27]: datetime.datetime.now()  
+		Out[27]: datetime.datetime(2013, 8, 10, 10, 56, 10, 611490)  
+	2.datetime中提供了strftime方法，可以将一个datetime型日期转换成字符串：		
+		In [28]: datetime.datetime.now().strftime("%Y%m%d")  
+		Out[28]: '20130810'  
+
+
+
+
+
