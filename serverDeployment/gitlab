@@ -1,0 +1,10 @@
+安装完gitlab，会开机自动启动，非常耗内存，关闭gitlab自启动设置
+Ubuntu 下禁止 Gitlab 开机自启动：
+
+$ sudo systemctl disable gitlab-runsvdir.service
+1
+Ubuntu 下启用 Gitlab 开机自启动：
+
+$ sudo systemctl enable gitlab-runsvdir.service
+
+当电脑特别卡的时候用top看看资源占用情况
