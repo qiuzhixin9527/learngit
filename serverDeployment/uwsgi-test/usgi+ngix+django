@@ -2,4 +2,96 @@
 1.完成django项目
 2.将django项目部署到服务器上（包括虚拟环境）
 3.安装uwsgi，并在项目中创建test.py进行测试，在项目根目录下创建my_uwsgi.ini并配置，最后启动uwsgi
-4.安装nginx,配置nginx,将/etc/nginx/目录下的uwsgi_params复制到项目文件夹，对此文件不做任何改动，在根目录下配置my_nginx.conf,与nginx配置目录建立连接，并在根目录下创建静态文件和媒体文件并在settings里面配置，完成后执行静态文件的回迁
+4.配置my_uwsgi.ini
+	# the base directory (full path)  django 程序的主目录
+	chdir = /home/qzx/yilanqunzhi/yilanqunzhi_project/cut_picture
+
+	# Django's wsgi file
+	wsgi-file = cut_picture/wsgi.py
+	#module          = cut_picture/wsgi.py
+
+	# maximum number of worker processes
+	processes = 4
+
+	#thread numbers startched in each worker process
+	threads = 2
+ 
+	#monitor uwsgi status  通过该端口可以监控 uwsgi 的负载情况
+	stats = 127.0.0.1:9191
+
+
+	# clear environment on exit
+	vacuum          = true
+
+	# 后台运行,并输出日志
+	daemonize = /var/log/uwsgi.log
+5.启动uwsgi，启动的时候需要使用sudo 
+	找到uwsgi的路径whereis uwsgi，
+	在django项目中启动 /home/qzx/env/py3.5/bin/uwsgi test-uwsgi.ini
+6.查看uwsgi
+	ps -ef| grep uwsgi
+7.结束uwsgi
+	killall -s INT /home/qzx/env/py3.5/bin/uwsgi
+
+
+nginx安装使用
+1.sudo apt-get install nginx
+	sudo /etc/init.d/nginx start
+
+2.cd /etc/nginx/conf.d/进入到这个文件中创建自己的nginx文件
+	touch cut_pic配置里面东西
+ 	server{
+            listen 80;
+            server_name localhost;
+            charset utf-8;
+            #index index.nginx-debian.html ;
+            #root /var/www/html;
+            access_log off;
+            location /static {
+                alias /home/qzx/yilanqunzhi/yilanqunzhi_project/cut_picture/static; 
+            }
+            location / {
+                uwsgi_pass  127.0.0.1:8001; #端口与原来的uwsgi中设置的端口一致
+                include     /etc/nginx/uwsgi_params;
+            }
+        }
+3.启动nginx
+	启动：systemctl start nginx	
+	重启：systemctl restart nginx
+	停止：systemctl stop nginx
+	查看状态：systemctl status nginx
+安装nginx异常失败
+	 sudo mv info/* info.bak
+   sudo rm- rf info
+   sudo rm -rf info
+   sudo mv info.bak info
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
