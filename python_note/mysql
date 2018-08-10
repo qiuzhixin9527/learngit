@@ -1,0 +1,3 @@
+1.mysql出现Can’t connect to MySQL server on (111 “Connection refused”)的问题
+答案：进入/etc/mysql/mysql.conf.d/mysqld.cnf中将bind-address		= 127.0.0.1
+     删了，或者改为0.0.0.0

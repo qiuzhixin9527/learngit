@@ -9,4 +9,6 @@ os.path常用方法：
 创建文件夹
 7.os.path.mkdir()单层的创建文件夹
 7.os.path.mkdir()多层的创建文件夹
-
+8.split()：拆分字符串。通过指定分隔符对字符串进行切片，并返回分割后的字符串列表。
+8.os.path.split()：将文件名和路径分割开。
+8.os.path.splitext 分离文件名与扩展名；默认返回(fname,fextension)元组，可做分片操作 。

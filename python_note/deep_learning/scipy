@@ -1,0 +1,4 @@
+1. scipy.misc 下的图像处理
+	imread()：返回的是 numpy.ndarray 也即 numpy 下的多维数组对象；
+2. ndim维数问题返回数组的维数
+

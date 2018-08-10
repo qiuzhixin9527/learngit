@@ -1,0 +1,7 @@
+screen -S yourname -> 新建一个叫yourname的session
+screen -ls -> 列出当前所有的session
+screen -xr yourname -> 回到yourname这个session
+screen窗口键入C-a d，Screen会给出detached提示：
+C-a k，这个快捷键杀死当前的窗口，同时也将杀死这个窗口中正在运行的进程。
+使用screen -wipe命令清除该会话：
+

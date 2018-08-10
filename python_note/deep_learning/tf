@@ -1,0 +1,47 @@
+import tensorflow as tf
+1.tf.argmax(Z3, 1)
+	test = np.array([[1, 2, 3], [2, 3, 4], [5, 4, 3], [8, 7, 2]])
+	np.argmax(test, 0)　　　＃输出：array([3, 3, 1]
+	np.argmax(test, 1)　　　＃输出：array([2, 2, 0, 0]
+
+	test[0] = array([1, 2, 3])
+	test[1] = array([2, 3, 4])
+	test[2] = array([5, 4, 3])
+	test[3] = array([8, 7, 2])
+	# output   :    [3, 3, 1]  
+
+	test[0] = array([1, 2, 3])  #2
+	test[1] = array([2, 3, 4])  #2
+	test[2] = array([5, 4, 3])  #0
+	test[3] = array([8, 7, 2])  #0
+
+2.tf.equal(A, B)是对比这两个矩阵或者向量的相等的元素，如果是相等的那就返回True，反正返回False，返回的值的矩阵维度和A是一样的
+
+3.cast(x, dtype, name=None) 
+	将x的数据格式转化成dtype.例如，原来x的数据格式是bool， 
+	那么将其转化成float以后，就能够将其转化成0和1的序列。反之也可以
+
+4.tf.reduce_sum理解为压缩求和，用于降维
+	# 'x' is [[1, 1, 1]
+	#         [1, 1, 1]]
+	#求和
+	tf.reduce_sum(x) ==> 6
+	#按列求和
+	tf.reduce_sum(x, 0) ==> [2, 2, 2]
+	#按行求和
+	tf.reduce_sum(x, 1) ==> [3, 3]
+	#按照行的维度求和
+	tf.reduce_sum(x, 1, keep_dims=True) ==> [[3], [3]]
+	#行列求和
+	tf.reduce_sum(x, [0, 1]) ==> 6
+5.tf.square()是对a里的每一个元素求平方	
+6.tf.maximum 函数返回 x 和 y 的最大值（即表达式：x > y ? x : y）
+7.tf.random_normal()函数用于从服从指定正太分布的数值中取出指定个数的值。
+	  shape: 输出张量的形状，必选
+    mean: 正态分布的均值，默认为0
+    stddev: 正态分布的标准差，默认为1.0
+    dtype: 输出的类型，默认为tf.float32
+    seed: 随机数种子，是一个整数，当设置之后，每次生成的随机数都一样
+    name: 操作的名称
+8.np.linalg.norm(x, ord=None, axis=None, keepdims=False)
+	

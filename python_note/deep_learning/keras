@@ -1,0 +1,4 @@
+一.卷积方法
+	1.keras.layers.convolutional.ZeroPadding2D(padding=(1, 1), dim_ordering='default')
+		padding= (1,0),会在行的最前和最后都增加一行0。比方说,原来的尺寸为(None,20,11,1),padding之后就会变成(None,22,11,1).
+		padding= (1,1),会在行和列的最前和最后都增加一行0。比方说,原来的尺寸为(None,20,11,1),padding之后就会变成(None,22,13,1).
