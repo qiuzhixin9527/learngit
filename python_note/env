@@ -1,0 +1,8 @@
+1.python环境的导入导出
+	1.在生产环境和开发环境都安装pip
+	2.在开发环境中 pip freeze > requirement.txt
+	3.上传requirement.txt生产环境之后，pip install -r requirement.txt
+
+2.conda快捷进入虚拟环境和环境的配置
+	export PATH="/home/qzx/miniconda3/bin:$PATH"
+	alias py3="source activate py3.5"

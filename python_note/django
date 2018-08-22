@@ -1,0 +1,4 @@
+1.路由传递问题
+ 正确url(r'index/$', index_views, name='index'),
+ 错误url(r'^index/$', index_views, name='index'),
+ 错误url(r'index$', index_views, name='index'),
