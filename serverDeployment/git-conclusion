@@ -25,6 +25,7 @@
 二.远程仓库
   1.创建ssh
 	$ ssh-keygen -t rsa -C "youremail@example.com"
+        遇到命令直接回车就行
   2.复制id_rsa.pub公钥到git
   3.将本地仓库和git仓库关联起来
 	 git remote add origin git@github.com:michaelliao/learngit.git

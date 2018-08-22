@@ -12,6 +12,7 @@
 	plt.rcParams['figure.dpi'] = 300 #分辨率
 6.显示图片
 	import numpy as np
+<<<<<<< HEAD
 	import matplotlib.pyplot as plt
 
 	img = plt.imread('lena.jpg')
@@ -28,3 +29,20 @@
 	plt.subplot(224); plt.imshow(img, cmap = plt.cm.gray_r) ## 黑白反转
 	plt.show()
 7.
+=======
+import matplotlib.pyplot as plt
+
+img = plt.imread('lena.jpg')
+#img = np.array(img)
+plt.figure(1)
+
+plt.imshow(img)
+if img.ndim == 3:
+    img = img[:,:,0]
+plt.figure(2)
+plt.subplot(221); plt.imshow(img),plt.axis('off')  ##取消坐标；一般显示的情况下，显示为热力图
+plt.subplot(222); plt.imshow(img, cmap ='gray')     ## 灰度图正确的表示方法1
+plt.subplot(223); plt.imshow(img, cmap = plt.cm.gray) ## 灰度图正确的表示方法2
+plt.subplot(224); plt.imshow(img, cmap = plt.cm.gray_r) ## 黑白反转
+plt.show()
+>>>>>>> 45cc7e7f3f503fc409f3d8a647d0243e366bdf8d

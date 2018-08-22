@@ -1,7 +1,10 @@
 1.mysql出现Can’t connect to MySQL server on (111 “Connection refused”)的问题
 答案：进入/etc/mysql/mysql.conf.d/mysqld.cnf中将bind-address		= 127.0.0.1
      删了，或者改为0.0.0.0
+<<<<<<< HEAD
 2.ubuntu连接远程MySQL数据库命令
 	mysql -u 用户名 -p密码 -h IP地址 -P 端口号 -D 数据库名字 
 	mysql -u root -proot -h 172.18.236.136 -P 3306 -D test 
 	记住-p后面的密码紧挨着-p不然会报错
+=======
+>>>>>>> 45cc7e7f3f503fc409f3d8a647d0243e366bdf8d

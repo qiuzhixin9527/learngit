@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 1.判断图片的完整性
 	
+=======
+1.判断图片的完整性，若不是图片则报异常
+	
+  from PIL import Image
+  trial_image = Image.open(file)
+  trial_image.verify()
+>>>>>>> 45cc7e7f3f503fc409f3d8a647d0243e366bdf8d
