@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/layui.css">
+    <script src="js/layui.js" charset="utf-8"></script>
+
+</head>
+<body>
+    <ul class="layui-nav">
+      <li class="layui-nav-item"><a href="" id="heatmap">热力图</a></li>
+      <li class="layui-nav-item"><a href="" id="locus">行人轨迹</a></li>
+      <li class="layui-nav-item"><a href="" id="time">停留时长</a></li>
+      <li class="layui-nav-item"><a href=""></a></li>
+    </ul>
+    <div>
+
+    </div>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+layui.use('element', function(){
+  var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+</script>
+</body>
+</html>
